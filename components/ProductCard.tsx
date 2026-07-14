@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Eye } from "lucide-react";
 import { Soap } from "@/types/soap";
+import { CartButton } from "./CartButton";
 
 interface ProductCardProps {
     soap: Soap;
@@ -37,11 +38,7 @@ export function ProductCard({ soap }: ProductCardProps) {
                     </p>
                 </div>
                 <div className="flex items-center justify-end">
-                    <button
-                        className="w-full max-w-32 rounded-md bg-black px-3 py-2 text-xs text-white transition-colors hover:bg-gray-800"
-                    >
-                        Add to Cart
-                    </button>
+                    <CartButton soap={soap} />
                 </div>
             </div>
         </div>

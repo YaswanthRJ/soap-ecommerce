@@ -1,5 +1,8 @@
+"use client"
+
 import { useState } from "react";
 import { CartLine, CartItem, CartContext } from "./CartContext";
+
 
 type Props = {
     children: React.ReactNode;
