@@ -10,7 +10,7 @@ interface OrderPreviewItemProps {
 
 export function OrderPreviewItem({ line }: OrderPreviewItemProps) {
   return (
-    <div className="flex items-center gap-3 border-b border-gray-200 py-3">
+    <div className="flex items-center gap-2 border-gray-200 py-2">
       <div className="relative h-16 w-16 overflow-hidden rounded-lg border">
         <Image
           src={line.item.picture}
