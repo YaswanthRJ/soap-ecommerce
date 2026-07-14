@@ -14,15 +14,20 @@ export function Header() {
         <h1 className="text-xl font-bold">Soap Store</h1>
       </Link>
 
-      <div className="relative">
-        <ShoppingCart />
+      <Link
+        href="/cart"
+        className="relative rounded-md p-2 hover:bg-gray-100"
+      >
+        <div className="relative flex gap-1">
+          <ShoppingCart />
 
-        {cart.totalItems > 0 && (
-          <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-            {cart.totalItems}
-          </span>
-        )}
-      </div>
+          {cart.totalItems > 0 && (
+            <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+              {cart.totalItems}
+            </span>
+          )}
+        </div>
+      </Link>
     </header>
   );
 }
